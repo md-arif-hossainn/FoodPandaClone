@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:id="@+id/image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/mainImage"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                android:src="@drawable/egg" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TK 128"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toStartOf="@id/discount"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/discount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Tk 140"
+            app:strikeThrough="@{true}"
+            android:textSize="13sp"
+            android:textColor="#433D3D"
+            app:layout_constraintStart_toEndOf="@+id/price"
+            app:layout_constraintTop_toTopOf="@+id/price" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brightfields Egg Brown 12pcs Regular"
+            android:maxLines="2"
+            android:gravity="center|start"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/price"
+            android:layout_marginTop="10dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
